@@ -36,7 +36,7 @@ router.post('/', visionHelper, (req, res) => {
       var response = responses[0];
       console.log(response);
       // doThingsWith(response)
-      res.send(response)
+      res.send(response.responses[0].webDetection.webEntities[0])
   })
   .catch(function(err) {
       console.error(err);
