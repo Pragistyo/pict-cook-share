@@ -29,6 +29,7 @@ const visionHelper = (req, res, next) => {
   req.vision = [requestsElement];
   next()
 }
+
 router.post('/', visionHelper, (req, res) => {
   visionClient.batchAnnotateImages({requests: req.vision})
   .then(function(responses) {
