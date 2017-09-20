@@ -4,11 +4,12 @@ const express = require('express'),
       cors = require('cors'),
       mongoose = require('mongoose');
 const port = process.env.PORT || 3000
-const user = require('./routes/user')
 const app = express()
+// const user = require('./routes/user')
+const fbApi = require('./routes/fb-api')
 
-var url = 'mongodb://anggraito:<PASSWORD>@mydb-shard-00-00-vv98n.mongodb.net:27017,mydb-shard-00-01-vv98n.mongodb.net:27017,mydb-shard-00-02-vv98n.mongodb.net:27017/recipe?ssl=true&replicaSet=mydb-shard-0&authSource=admin';
-mongoose.connect(url);
+// var url = 'mongodb://anggraito:<PASSWORD>@mydb-shard-00-00-vv98n.mongodb.net:27017,mydb-shard-00-01-vv98n.mongodb.net:27017,mydb-shard-00-02-vv98n.mongodb.net:27017/recipe?ssl=true&replicaSet=mydb-shard-0&authSource=admin';
+// mongoose.connect(url);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', function() {
@@ -20,7 +21,9 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(morgan('dev'))
 
-app.use('/user', user)
+// app.use('/user', user)
+app.use('/api', fbApi)
+
 
 app.listen(port);
 console.log('Your app is running on http://localhost:' + port);
