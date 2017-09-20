@@ -2,9 +2,10 @@
   "name": "pict-cook-share",
   "version": "1.0.0",
   "description": "take a photo then get your recipe",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -20,11 +21,14 @@
   },
   "homepage": "https://github.com/anggraito/pict-cook-share#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.1",
     "cors": "^2.8.4",
     "dotenv": "^4.0.0",
     "express": "^4.15.4",
+    "jsonwebtoken": "^8.0.1",
     "mongoose": "^4.11.12",
+    "morgan": "^1.8.2",
     "oauth": "^0.9.15"
   }
 }
