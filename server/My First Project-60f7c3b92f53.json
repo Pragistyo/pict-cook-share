@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "rosy-phalanx-178403",
+  "private_key_id": "60f7c3b92f53292463ae71f490faada8dd9b3634",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCdEIvSg8EGn+s8\nJMABzFbK+AAFnkKAsDYkooD6m9X5qYkhxeanS8leQiXm3Vuk8/ohRvui5oTiiujf\nHiUtQKq3brEJXXJWt6cxG14fS5JGR89LYU0Hxy9C2EAIghjxW1wbM23GsFuHYhxS\nOV2RAcI5DjGrDe+/d2XxluE/dHFAW3gUw8hp3uI5I46X9A4uMXXtIIttKUPuEjo+\nlfyq7pM0dWRJ92KWW8xnkGLsI/z0wn5W28jO7cSfA6Frka5bALX3B0/cs3BmOHaf\nLWy0wS2zo4hoM+QPqPk6VO12X4FW9b/tatDpNOjNr8cVohMyggovSt44SaSuepME\njprQYTD5AgMBAAECggEAEsjN0CmNxlsN6S2EATMNFk0+w21ACuAIOa1tu4szth4+\nllly0oNP3AQRQGEs+rdrLNuucLcdIXL3kueqDpVzVWjZp4MTj6d7SXY6dYe2QM2J\nzzwd2FZMIrR2RA47KXKBu4cVE/Q3niNvu628sQEC14wJCKosCDwhZxliaxJkEQwv\neFxpvMNpDv3QzUh9tgsUYJAZLc2vbl7Z5aLcGJa+chqp5DyFA1RDp9f1pOWDHkBV\n7g7KGU4JglgpwOGgipLM/ph5XhzAPwXd2fFOxew+MMiQMM06iimaBsthLA5OfvWh\nJaK8GOSmvNuIk3a0+aihE5jsVB/IebmyU9IPexJvuQKBgQDRSUl+KeORnPKy0Ju0\nxtfCjugJt95Nu/xUsc1t4IwlhZmW/pT1LZmGea0026byroYIyTvZXvcSn5OAcz9/\nBE6hfsynv767o3gLaIEEWcBFO+IqnroLWBEf61eA4Hk7+ttKdWHRRNPFnnAXpPFx\nstPF4a3ssdWSTRJsCvdQYR3xqwKBgQDAH0pnvMarqC6DfeFMc80cvtFOGzvEOM33\nsZnLn8Q/iZagD8vyvOsRV0QBSlOgAH1A4+SE5I91bl3miY3HNSQlzMYv9yFPUmSL\n4ZXZD/rUUJo0yPjrvvhTDqqYkPO1m7lBTMuamZOk3chLM9Uhx+AVhlAxDNGYLXg4\nTSBLo4YL6wKBgC0Wc93ZWmyZenPpm1Hz8LG6peTKFvt6P19jutUsJiVDRhaQnDjB\n7SxadGVJ2Qq5bKjh6aHn4qTBej6XFZvgqqwCLEcLeSTlj8wtZHYye8iuoQf7kCs3\neuD8i6p5McUpQyskZMF36YPOoWmGoHmVRCiCeTzgBxnwvsJGDofjlFbnAoGAK5Ut\nmNjfLMOrQZMF0AUZC6NR8ekFpt7IAp+cZu/oYg2BSPAscPVgUf+84poM3GggAd9w\n0KDU1mviC1E7A2zPtW99qhXizY7AVmcnSiVw3kcmpEDPDxO0W4shMhj34EPiQ6j7\nKygZsTXKoRyyBcbE070zZd0lkuMFuaftYptG5l8CgYBKna0xku8c4jSoDidb/QYQ\ntdeAiONbFfVrQClvqxls6Fck9D5LHHVhZ2sLZwSxoYPxUqbLfsYDxQr2A3GX7YsW\nX6EiZwqqlc+8fC3F8SfDRxuNciLBtqJ3J+WtqbmW7XhcqxYJ1LDe0vvtD9iDySp2\n5OgYVUqPjRFTBWuZgIkiEw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "resep-158@rosy-phalanx-178403.iam.gserviceaccount.com",
+  "client_id": "108195752235495883058",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/resep-158%40rosy-phalanx-178403.iam.gserviceaccount.com"
+}
