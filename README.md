@@ -13,6 +13,7 @@ Route | HTTP | Description
 /signup | POST | Sign up 
 /signin | POST | Sign in 
 /recipe | GET,POST | Get all recipe as homepage, upload , all recipe and detail recipe
+/user | GET | All User
 
 ## Run this API
 Clone the repository and u should install the package who's declare on this file. You just doing :
