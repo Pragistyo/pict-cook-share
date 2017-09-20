@@ -1,0 +1,30 @@
+{
+  "name": "pict-cook-share",
+  "version": "1.0.0",
+  "description": "take a photo then get your recipe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anggraito/pict-cook-share.git"
+  },
+  "keywords": [
+    "api-google-vison-food1fork-express"
+  ],
+  "author": "anggraito",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anggraito/pict-cook-share/issues"
+  },
+  "homepage": "https://github.com/anggraito/pict-cook-share#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.12",
+    "oauth": "^0.9.15"
+  }
+}
