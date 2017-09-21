@@ -42,6 +42,16 @@ section{
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
+.detail-item{
+  background-color: #fff;
+}
+li{
+  list-style: none;
+  margin-left: 35%;
+  background-color: #dedede;
+  padding: 6px 10px;
+  margin-top: 5px;
+}
 
 footer{
   position: fixed;

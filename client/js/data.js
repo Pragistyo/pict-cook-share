@@ -70,6 +70,7 @@ function recipe(id){
     success: function(data){ 
       console.log(data.recipe)
       var recipe = data.recipe
+      
       $('div.content-recipe').append(`
       <div class="col-md-4 thumbnail">
         <div class="images" style="background-image: url('${recipe.image_url}')"></div>
@@ -79,16 +80,40 @@ function recipe(id){
         <h3>${recipe.title}</h3>
         <p>Publisher: ${recipe.publisher}</p>
         <ul class="ingredient-wrap">
-          <li>
-            <span class="glyphicon glyphicon glyphicon-cutlery" aria-hidden="true"></span>
-            ${recipe.ingredients.splice(',')}
-          </li>
-        </ul>
-      </div>
       `)
+      ingredient(id)
     },
     fail: function(err){
       console.log(err);
+    }
+  })
+}
+
+function ingredient(id){
+  $.ajax({
+    url: `https://community-food2fork.p.mashape.com/get?key=3f0eb392931eb697ef53ea1cf86478f8&rId=${id}`,
+    type: 'GET',
+    headers: {
+      'X-Mashape-Key': 'ft6JTtlfammshF6NyVGY4XGOwdxnp1VENsbjsnlbs3PxWiJZdd',
+      'Accept': 'application/json'
+    },
+    dataType: 'json',
+    success: function(data){ 
+      console.log(data.recipe)
+      var ingredient = data.recipe.ingredients
+      for (var i = 0; i < ingredient.length; i++) {
+      $('div.content-recipe').append(`
+            <li>
+              <span class="glyphicon glyphicon glyphicon-cutlery" aria-hidden="true"></span>  
+                ${ingredient[i]}
+            </li>
+          </ul>
+        </div>
+      `)
+      }
+    },
+    fail: function(err){
+      console.log(err)
     }
   })
 }
