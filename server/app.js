@@ -4,8 +4,9 @@ const express = require('express'),
       cors = require('cors'),
       mongoose = require('mongoose');
 const port = process.env.PORT || 3000
-// const user = require('./routes/user')
-const vision = require('./routes/vision')
+const user = require('./routes/user'),
+      vision = require('./routes/vision'),
+      fbApi = require('./routes/fb-api')
 const app = express()
 
 var url = 'mongodb://localhost/recipe';
@@ -21,7 +22,8 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(morgan('dev'))
 
-// app.use('/', user)
+app.use('/', user)
+app.use('/api', fbApi)
 app.use('/vision', vision)
 
 app.listen(port);
