@@ -1,0 +1,49 @@
+*{
+
+}
+header{
+}
+section{
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+.thumbnail{
+  display: block;
+}
+.thumbnail .images{
+  /* background-image: url('/assets/images/header1.jpg'); */
+  border-bottom: 1px solid #ddd;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover !important;
+  transition: opacity 0.2s;
+  height: 210px;
+  width: 100%;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  text-align: center;
+  background-color: #dedede;
+  padding: 10px;
+}
+footer .uploadfile{
+  display: inline;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width:786px) { 
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}

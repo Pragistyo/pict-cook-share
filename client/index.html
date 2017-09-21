@@ -3,82 +3,105 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.css"> -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
-<body><br>
-  <h1 class="text-center">Judul</h1>
-  <img class="img-responsive center-block" src="/folder/resep_masakan_indonesia_icon.png" width="100" height="40">
-  <title>Document</title>
-
-  <div class="container">
+<body>
+  <header class="container">
     <div class="row">
-      <div class="col-md-4">
-        <img class="img-responsive center-block" src="/folder/resep_masakan_indonesia_icon.png" width="100" height="40">
-      </div>
-      <div class="col-md-4">
-        <img class="img-responsive center-block" src="/folder/resep_masakan_indonesia_icon.png" width="100" height="40">
-      </div>
-      <div class="col-md-4">
-        <img class="img-responsive center-block" src="/folder/resep_masakan_indonesia_icon.png" width="100" height="40">
+      <img src="" alt="logo">
+      <div>
+        <input type="text" name="search" class="form-control serachRecipe" placeholder="Search recipe here">
       </div>
     </div>
-  </div>
+  </header>
 
-  <div class="container">
+  <section class="container">
     <div class="row">
-      <div class="col-md-4">
-        <img class="img-responsive center-block" src="/folder/resep_masakan_indonesia_icon.png" width="100" height="40">
-      </div>
-      <div class="col-md-4">
-        <img class="img-responsive center-block" src="/folder/resep_masakan_indonesia_icon.png" width="100" height="40">
-      </div>
-      <div class="col-md-4">
-        <img class="img-responsive center-block" src="/folder/resep_masakan_indonesia_icon.png" width="100" height="40">
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-  	<div class="row">
-     <div id="custom-search-input">
-        <div class="input-group col-md-12">
-            <input type="text" class="  search-query form-control" placeholder="Input"/>
-            <span class="input-group-btn">
-                <button class="btn btn-danger" type="button">
-                    <span class=" glyphicon glyphicon-search">Search</span>
-                </button>
-            </span>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <div class="images">
+            
+          </div>
+          <div class="caption">
+            <h4>Nama Resep</h4>
+            <p>Shared by: siapa</p>
+            <p><a href="#" class="btn btn-default" role="button">Show Detail</a></p>
+          </div>
         </div>
       </div>
-  	</div>
-  </div><br>
-
-  <div class="container">
-    <div class="row">
-      <!-- <%data.forEach(z=>{%> -->
-        <div class="col-md-12">
-          <!-- <%=z.data%> -->
-          <!-- <img src="" alt=""> -->
-        </div>
-      <!-- <%})%> -->
     </div>
-  </div><br>
 
-
-  <div class="container">
-    <div class="row">
-      <button type="button" class="btn btn-primary btn-lg btn-block">Take a Picture</button>
+    <div>
+      <div class="container hasilApi col-md-12">
     </div>
-  </div>
-  <!-- <h3 class="type-r1">TES CSS</h3> -->
+  </section>
 
-  <script src="./js/data.js"></script>
+  <footer>
+    <div class="container btn-upload">
+      <form class="kirimGambar">
+        <input type="file" id="filePhoto" name="filePhoto" accept="image/*" >
+        <input type="submit" class="btn btn-info" value="submit">     
+      </form>
+    </div>
+  </footer>
+
+  <!-- <script src="/js/data.js"></script> -->
+  <script>
+    $('form#kirimGambar').on('submit', (event) => {
+      event.preventDefault()
+      var data = new FormData();
+      data.append('filePhoto', $('#filePhoto')[0].files[0])
+
+      axios({
+        method: 'POST',
+        url: 'http://localhost:3000/vision',
+        data: $('#filePhoto')[0].files[0],
+        processData: false
+      })
+      .then((data)=>{
+        console.log(data)
+        //nanti return axios food disini
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    })
+
+    var search = $('input[name="search"]')
+    seacrh.keyup(function() {
+      let keyword = $(this).val()
+      $.ajax({
+        url: `https://community-food2fork.p.mashape.com/search?key=3f0eb392931eb697ef53ea1cf86478f8&q=${keyword}`,
+        type: 'GET',
+        dataType: 'json',
+        success: function(response){
+          console.log(response)
+        },
+        fail: function(err) {
+          console.log(err)
+        }
+      })
+    })
+    // var $kirimGambar = $('#kirimGambar')
+    // $('form.kirimGambar').submit(function(eventHandler){
+    //   eventHandler.preventDefault();
+    //   axios.post('http://localhost:3000/vision', {
+    //     gambar : $kirimGambar.val()
+    //   })
+    //   .then(response => {
+    //     console.log(response);
+    //   })
+    //   .catch(err => {
+    //     console.log(err);
+    //   })
+    // })
+  </script>
 </body>
 </html>

@@ -22,6 +22,7 @@
   "homepage": "https://github.com/anggraito/pict-cook-share#readme",
   "dependencies": {
     "@google-cloud/vision": "^0.12.0",
+    "axios": "^0.16.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.1",
     "cors": "^2.8.4",
