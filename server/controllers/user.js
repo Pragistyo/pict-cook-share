@@ -1,15 +1,22 @@
 const modelUser = require('../models/User')
-var jwt = require('jsonwebtoken')
-var bcrypt = require('bcryptjs')
-var salt = bcrypt.genSaltSync(10);
+const jwt = require('jsonwebtoken')
+const bcrypt = require('bcryptjs')
+const salt = bcrypt.genSaltSync(10);
 require('dotenv').config()
 
-var getAllUser = (req, res) => {
-  modelUser.find()
-  .then((users) => {
-    res.send(users)
+var getAllUser = (req,res) => {
+  modelUser.find({}).then(dataUser=>{
+    res.send(dataUser)
+  }).catch(err=>{
+    res.send(err)
   })
-  .catch((err) => {
+}
+
+var getSingleUser = (req, res) => {
+  modelUser.findById({_id:req.params.id})
+  .then(dataUser=>{
+    res.send(dataUser)
+  }).catch(err=>{
     res.send(err)
   })
 }
@@ -57,5 +64,5 @@ var sigIn = (req, res) => {
 }
 
 module.exports = {
-  getAllUser, signUp, sigIn
+  getAllUser, signUp, sigIn,  getSingleUser
 }
