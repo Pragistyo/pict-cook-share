@@ -69,18 +69,19 @@ function recipe(id){
     dataType: 'json',
     success: function(data){ 
       console.log(data.recipe)
+      var recipe = data.recipe
       $('div.content-recipe').append(`
       <div class="col-md-4 thumbnail">
-        <div class="images"></div>
-        <p class="rating"><span>Rating</span></p>
+        <div class="images" style="background-image: url('${recipe.image_url}')"></div>
+        <p class="rating"><span>Rating: ${recipe.social_rank}</span></p>
       </div>
       <div class="col-md-8 detail-item">
-        <h3>Judul resep masakannya</h3>
-        <p>Publisher</p>
+        <h3>${recipe.title}</h3>
+        <p>Publisher: ${recipe.publisher}</p>
         <ul class="ingredient-wrap">
           <li>
             <span class="glyphicon glyphicon glyphicon-cutlery" aria-hidden="true"></span>
-            Ingredient
+            ${recipe.ingredients.splice(',')}
           </li>
         </ul>
       </div>
