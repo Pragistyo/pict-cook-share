@@ -18,6 +18,24 @@
 
   <div class="container">
     <div class="row">
+     <div id="custom-search-input">
+        <div class="input-group col-md-12">
+          <!-- <form class="" action="#" method="post"> -->
+            <input type="text" class="  search-query form-control" placeholder="Input"/>
+            <span class="input-group-btn">
+                <button class="btn btn-danger" type="button">
+                    <span class=" glyphicon glyphicon-search">Search</span>
+                </button>
+            </span>
+          <!-- </form> -->
+        </div>
+      </div>
+    </div>
+  </div><br>
+
+
+  <div class="container">
+    <div class="row">
 
       <div class="col-md-4 ">
         <form class="" action="#" method="post">
@@ -67,24 +85,6 @@
   </div><br>
 
 
-
-  <div class="container">
-  	<div class="row">
-     <div id="custom-search-input">
-        <div class="input-group col-md-12">
-          <!-- <form class="" action="#" method="post"> -->
-            <input type="text" class="  search-query form-control" placeholder="Input"/>
-            <span class="input-group-btn">
-                <button class="btn btn-danger" type="button">
-                    <span class=" glyphicon glyphicon-search">Search</span>
-                </button>
-            </span>
-          <!-- </form> -->
-        </div>
-      </div>
-  	</div>
-  </div><br>
-
 <div class="container">
   <div class="row">
     <!-- <%data.forEach(z=>{%> -->
@@ -96,6 +96,13 @@
   </div>
 </div><br>
 
+<div class="container">
+  <form class="" action="#" method="post">
+    <div class="row">
+      <button type="button" class="btn btn-success btn-lg btn-block" onclick="uploadData()">Browse Picture</button>
+    </div>
+  </form>
+</div><br>
 
   <div class="container">
     <form class="" action="#" method="post">
