@@ -5,9 +5,10 @@ Pict Cook n Share. There is an app using opensource API . Collaborate for team w
 ## Build with:
 * [Mongoose](https://www.postgresql.org/download/) - Database
 * [Express](https://expressjs.com/) - Enpoint Setup
-* [Google Vision](https://cloud.google.com/vision/) - Picture Detections
-* [Food2Fork](http://food2fork.com/default#) - Database Recipe
+* [Google Vision](https://cloud.google.com/vision/) - API Picture Detections
+* [Food2Fork](http://food2fork.com/default#) - API Recipe
 
+## Endpoin
 Route | HTTP | Description
 ------------ | ------------- | -------------
 /signup | POST | Sign up 
