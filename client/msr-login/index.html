@@ -1,56 +1,45 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Facebook Login JavaScript Shyf</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://bootswatch.com/lumen/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-    #timeline-wrapper {
-      display: none;
-    }
-    </style>
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="assets/fbsdk.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron text-center">
-        <h1>
-          Shyf (Shoot Your Food) Application
-        </h1>
-        <button id="login-btn" class="btn btn-primary" type="button" onclick="FBLogin()">
-          <i class="fa fa-facebook-official"></i> Login With Facebook
-        </button>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <header class="container">
+    <div class="row">
+      <img src="" alt="logo">
+      <div class="search-wrap">
+        <input type="text" name="search" class="form-control serachRecipe" placeholder="Search recipe here">
+        <span class="src glyphicon glyphicon-search" aria-hidden="true"></span>
       </div>
+    </div>
+  </header>
 
+  <section class="container">
+    <div class="row">
+      <h3 class="count-recipe"></h3>
+    </div>
+    <div class="row content-recipe">
+    </div>
+  </section>
 
-      <div id="timeline-wrapper">
-        <div class="form-group">
-          <label for="textArea" class="control-label">Post New Status</label>
-          <textarea id="status" class="form-control" rows="3" id="textArea"></textarea>
-          <br/>
-          <button class="btn btn-primary" type="button" onclick="postStatus()">
-            <i class="fa fa-send"></i> Post
-          </button>
-        </div>
-        <hr/>
+  <footer>
+    <div class="container btn-upload">
+      <form class="kirimGambar">
+        <input type="file" id="filePhoto" name="filePhoto" accept="image/*" >
+        <input type="submit" class="btn btn-info" value="submit">     
+      </form>
+    </div>
+  </footer>
 
-        <h2>
-          Your Timeline
-          <button type="button" class="btn btn-primary" onclick="getTimelineFB()">
-            <i class="fa fa-refresh"></i>
-          </button>
-        </h2>
-        <hr/>
-        <div id="timeline"></div>
-          <ul class="pager">
-            <li class="previous disabled" onclick="prevNextTimeline(prev)"><a href="#">&larr; Newer</a></li>
-            <li class="next" onclick="prevNextTimeline(next)"><a href="#">Older &rarr;</a></li>
-          </ul>
-        </div>
-      </div>
-  </body>
+  <script src="/js/data.js"></script>
+</body>
 </html>
