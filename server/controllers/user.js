@@ -74,7 +74,7 @@ var signIn = (req,res) => {
         console.log('signin succsess');
         res.send({token:token})
     } else {
-      res.send('wrong password')
+      res.send('incorrect password')
     }
   }).catch(err => {
     res.send(err)
