@@ -1,17 +1,15 @@
-$('form#kirimGambar').on('submit', (event) => {
-  event.preventDefault()
-  var data = new FormData();
-  data.append('filePhoto', $('#filePhoto')[0].files[0])
-
-  axios({
-    method: 'POST',
-    url: 'http://localhost:3000/vision',
-    data: $('#filePhoto')[0].files[0],
-    processData: false
+var $file = $('#filePhoto')
+$('form.kirimGambar').submit(function(eventHandler){
+  eventHandler.preventDefault()
+  console.log($file)
+  axios.post('http://localhost:3000/vision', {
+    gambar: $file.val()
   })
-  .then((data)=>{
-    console.log(data)
-    //nanti return axios food disini
+  .then((result)=>{
+    console.log(result.data.description)
+    var key = result.data.description
+    $('div.content-recipe').empty()
+    srch(key)
   })
   .catch(err => {
     console.log(err)
@@ -20,7 +18,12 @@ $('form#kirimGambar').on('submit', (event) => {
 
 var search = $('input[name="search"]')
 search.keyup(function() {
+  $('div.content-recipe').empty()
   let keyword = $(this).val()
+  srch(keyword)
+})
+
+function srch(keyword){
   $.ajax({
     url: `https://community-food2fork.p.mashape.com/search?key=3f0eb392931eb697ef53ea1cf86478f8&page=1&q=${keyword}`,
     type: 'GET',
@@ -54,7 +57,7 @@ search.keyup(function() {
       console.log(err)
     }
   })
-})
+}
 
 function recipe(id){
   $('h3.count-recipe').empty()
@@ -70,7 +73,6 @@ function recipe(id){
     success: function(data){ 
       console.log(data.recipe)
       var recipe = data.recipe
-      
       $('div.content-recipe').append(`
       <div class="col-md-4 thumbnail">
         <div class="images" style="background-image: url('${recipe.image_url}')"></div>

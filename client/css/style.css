@@ -52,6 +52,9 @@ li{
   padding: 6px 10px;
   margin-top: 5px;
 }
+.content-recipe{
+  margin-bottom: 50px;  
+}
 
 footer{
   position: fixed;
@@ -61,8 +64,9 @@ footer{
   background-color: #dedede;
   padding: 10px;
 }
-footer .uploadfile{
+footer #filePhoto{
   display: inline;
+  width: 80%;
 }
 
 /* Small devices (tablets, 768px and up) */
