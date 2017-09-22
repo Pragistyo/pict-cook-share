@@ -6,8 +6,7 @@ const express = require('express'),
 const port = process.env.PORT || 3000
 const user = require('./routes/user'),
       vision = require('./routes/vision'),
-      fbApi = require('./routes/fb-api'),
-      sign = require('./routes/sign')
+      fbApi = require('./routes/fb-api')
 const app = express()
 
 var url = 'mongodb://localhost/Shyf-App';
@@ -23,8 +22,8 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(morgan('dev'))
 
-app.use('/', sign)
-app.use('/user', user)
+// app.use('/', sign)
+app.use('/', user)
 app.use('/api', fbApi)
 app.use('/vision', vision)
 
