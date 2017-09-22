@@ -9,7 +9,7 @@ const user = require('./routes/user'),
       fbApi = require('./routes/fb-api')
 const app = express()
 
-var url = 'mongodb://localhost/recipe';
+var url = 'mongodb://localhost/Shyf-App';
 mongoose.connect(url);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
@@ -22,6 +22,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(morgan('dev'))
 
+// app.use('/', sign)
 app.use('/', user)
 app.use('/api', fbApi)
 app.use('/vision', vision)

@@ -39,7 +39,7 @@ var signUp = (req, res) => {
   })
 }
 
-var sigIn = (req, res) => {
+var signIn = (req, res) => {
   modelUser.findOne({
     username: req.body.username
   })
@@ -50,19 +50,22 @@ var sigIn = (req, res) => {
         id: user._id,
         username: user.username,
         email: user.email
-      }, process.env.SECRET_JWT)
-      res.send(token)
+      }, 'rahasia')
+      res.send({token:token})
     } else {
-      res.send({
-        message: "Password tidak cocok"
+      res.status(401).send({
+        status: 401,
+        err:{
+          msg: 'incorrect password'
+        }
       })
     }
   })
   .catch(err => {
-    res.send(err)
+    res.status(500).send(err)
   })
 }
 
 module.exports = {
-  getAllUser, signUp, sigIn,  getSingleUser
+  getAllUser, signUp, signIn,  getSingleUser
 }

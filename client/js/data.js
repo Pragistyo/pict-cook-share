@@ -1,3 +1,9 @@
+$(document).ready(()=>{
+  if(!localStorage.getItem('jwttoken') ){
+    window.location.href='signin.html'
+  }
+})
+
 var $file = $('#filePhoto')
 $('form.kirimGambar').submit(function(eventHandler){
   eventHandler.preventDefault()
@@ -37,7 +43,7 @@ function srch(keyword){
       $('h3.count-recipe').empty()
       $('div.content-recipe').empty()
       $('h3.count-recipe').append(`${response.count} from ${keyword}`)
-      var result = response.recipes 
+      var result = response.recipes
       for(var i=0; i < result.length; i++){
         $('div.content-recipe').append(`
           <div class="col-sm-6 col-md-4" onclick="recipe(${result[i].recipe_id})">
@@ -49,7 +55,7 @@ function srch(keyword){
                 <p>Publisher: <a href="${result[i].publisher_url}">${result[i].publisher}</a></p>
               </div>
             </div>
-          </div>  
+          </div>
         `)
       }
     },
@@ -70,7 +76,7 @@ function recipe(id){
      'Accept': 'application/json'
     },
     dataType: 'json',
-    success: function(data){ 
+    success: function(data){
       console.log(data.recipe)
       var recipe = data.recipe
       $('div.content-recipe').append(`
@@ -100,13 +106,13 @@ function ingredient(id){
       'Accept': 'application/json'
     },
     dataType: 'json',
-    success: function(data){ 
+    success: function(data){
       console.log(data.recipe)
       var ingredient = data.recipe.ingredients
       for (var i = 0; i < ingredient.length; i++) {
       $('div.content-recipe').append(`
             <li>
-              <span class="glyphicon glyphicon glyphicon-cutlery" aria-hidden="true"></span>  
+              <span class="glyphicon glyphicon glyphicon-cutlery" aria-hidden="true"></span>
                 ${ingredient[i]}
             </li>
           </ul>
@@ -118,4 +124,15 @@ function ingredient(id){
       console.log(err)
     }
   })
+}
+
+$('#logout').click(()=>{
+  localStorage.removeItem('jwttoken')
+  window.location.href='signin.html'
+})
+
+function uploadData() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "file");
+  document.body.appendChild(x);
 }

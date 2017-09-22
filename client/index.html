@@ -1,70 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <link rel="stylesheet" type="text/css" href="/css/style.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
-  <header class="container-fluid">
-    <div class="row heading">
-      <img src="/image/logo.png" alt="logo">
-      <div class="search-wrap">
-        <input type="text" name="search" class="form-control serachRecipe" placeholder="Search recipe here">
-        <span class="src glyphicon glyphicon-search" aria-hidden="true"></span>
-      </div>
-    </div>
-  </header>
+ <header class="container-fluid">
+   <div class="row heading">
+     <img src="/image/logo.png" alt="logo">
+     <div class="search-wrap">
+       <input type="text" name="search" class="form-control serachRecipe" placeholder="Search recipe here">
+       <span class="src glyphicon glyphicon-search" aria-hidden="true"></span>
+     </div>
+   </div>
+ </header>
+ <br>
+<button id="logout" type="submit" class="btn btn-warning" name="button">Signout</button>
+<br>
 
-  <section class="carousel-wrap">
-    <div id="myCarousel" class="carousel slide">
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img class="iimg" src="/image/header2.jpg" alt="Chania" >
-        </div>
-        <div class="item">
-          <img class="iimg" src="/image/header1.jpg" alt="Flower" >
-        </div>
-        <div class="item">
-          <img class="iimg" src="/image/header3.jpg" alt="Flower" >
-        </div>
-      </div>
+ <section class="carousel-wrap">
+   <div id="myCarousel" class="carousel slide">
+     <div class="carousel-inner" role="listbox">
+       <div class="item active">
+         <img class="iimg" src="/image/header2.jpg" alt="Chania" >
+       </div>
+       <div class="item">
+         <img class="iimg" src="/image/header1.jpg" alt="Flower" >
+       </div>
+       <div class="item">
+         <img class="iimg" src="/image/header3.jpg" alt="Flower" >
+       </div>
+     </div>
 
-      <a class="left carousel-control" href="#myCarousel" role="button">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </section>
+     <a class="left carousel-control" href="#myCarousel" role="button">
+       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+       <span class="sr-only">Previous</span>
+     </a>
+     <a class="right carousel-control" href="#myCarousel" role="button">
+       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+       <span class="sr-only">Next</span>
+     </a>
+   </div>
+ </section>
 
-  <section class="container">
-    <div class="row">
-      <h3 class="count-recipe"></h3>
-    </div>
-    <div class="row content-recipe">
-    </div>
-  </section>
+ <section class="container">
+   <div class="row">
+     <h3 class="count-recipe"></h3>
+   </div>
+   <div class="row content-recipe">
+   </div>
+ </section>
 
-  <footer>
-    <div class="container btn-upload">
-      <form class="kirimGambar">
-        <input type="text" class="form-control" id="filePhoto" name="filePhoto" placeholder="Input URL here" >
-        <button type="submit" class="btn btn-warning">Submit</button>     
-      </form>
-    </div>
-  </footer>
+ <footer>
+   <div class="container btn-upload">
+     <form class="kirimGambar">
+       <input type="text" class="form-control" id="filePhoto" name="filePhoto" placeholder="Input URL here" >
+       <button type="submit" class="btn btn-warning">Submit</button>
+     </form>
+   </div>
+ </footer>
 
-  <script src="/js/data.js"></script>
+ <script src="/js/data.js"></script>
 </body>
 </html>
