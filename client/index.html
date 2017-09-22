@@ -3,38 +3,37 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.css"> -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head><br>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
 
-<body><br>
-  <h1 class="text-center">Judul</h1>
-  <img class="img-responsive center-block" src="/folder/resep_masakan_indonesia_icon.png" width="100" height="40">
-  <title>Document</title>
+<body>
 
-  <div class="container">
-    <div class="row">
-     <div id="custom-search-input">
-        <div class="input-group col-md-12">
-          <!-- <form class="" action="#" method="post"> -->
-            <input type="text" class="  search-query form-control" placeholder="Input"/>
-            <span class="input-group-btn">
-                <button class="btn btn-danger" type="button">
-                    <span class=" glyphicon glyphicon-search">Search</span>
-                </button>
-            </span>
-          <!-- </form> -->
-        </div>
+<header class="container">
+  <div class="row">
+      <img class="img-responsive center-block" src="/image/logo.png" alt="logo">
+      <h3></h3>
+      <!-- <img class="img-responsive center-block" src="/folder/resep_masakan_indonesia_icon.png" width="100" height="40"> -->
+      <div class="input-group col-md-12">
+        <form class="input-group " action="#" method="post">
+        <input type="text" name="search" class="form-control search-query searchRecipe" placeholder="Search recipe here">
+          <span class="input-group-btn">
+            <button class="btn btn-danger" type="button">
+                <span class=" glyphicon glyphicon-search">Search</span>
+            </button>
+          </span>
+        </form>
       </div>
     </div>
-  </div><br>
+</header><br>
 
 
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
 
       <div class="col-md-4 ">
@@ -60,12 +59,93 @@
           <button class="center-block" type="submit" name="button">Look recipe</button>
       </form>
       </div>
-
     </div>
-  </div><br>
+  </div> -->
 
-  <div class="container">
-    <div class="row">
+
+      <section class="container">
+        <div class="row">
+
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <div class="images">
+
+                </div>
+                <div class="caption">
+                  <h4>Nama Resep</h4>
+                  <p>Shared by: siapa</p>
+
+                  <div id="detail-recipe" class="collapse">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </div>
+                  <!-- <form class="" action="index.html" method="post"> -->
+                  <p><a href="#" class="btn btn-default" role="button" data-toggle="collapse" data-target="#detail-recipe">Show Detail</a></p>
+                  <!-- </form> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <div class="images">
+
+                </div>
+                <div class="caption">
+                  <h4>Nama Resep</h4>
+                  <p>Shared by: siapa</p>
+
+                  <div id="detail-recipe" class="collapse">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </div>
+                  <form class="" action="index.html" method="post">
+                  <p><a href="#" class="btn btn-default" role="button" data-toggle="collapse" data-target="#detail-recipe">Show Detail</a></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <div class="images">
+
+                </div>
+                <div class="caption">
+                  <h4>Nama Resep</h4>
+                  <p>Shared by: siapa</p>
+
+                  <div id="detail-recipe" class="collapse">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </div>
+                  <form class="" action="index.html" method="post">
+                  <p><a href="#" class="btn btn-default" role="button" data-toggle="collapse" data-target="#detail-recipe">Show Detail</a></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+          <div>
+            <div class="container hasilApi col-md-12"></div>
+          </div>
+<!-- ======= -->
+<!-- >>>>>>> 26d901a1e8533f34195cd15ae5a6aef3e06c5dc6 -->
+
+<!-- <<<<<<< HEAD
+  </div><br>
+======= -->
+<!-- >>>>>>> 26d901a1e8533f34195cd15ae5a6aef3e06c5dc6 -->
+
+  <!-- <section class="container">
+    <div class="row"> -->
+<!-- <<<<<<< HEAD
       <div class="col-md-4 center-block">
         <img class="img-responsive center-block" src="/folder/resep_masakan_indonesia_icon.png" width="100" height="40">
         <p class="text-center" ><a href="#">Recipe description</a></p>
@@ -87,12 +167,12 @@
 
 <div class="container">
   <div class="row">
-    <!-- <%data.forEach(z=>{%> -->
+    <%data.forEach(z=>{%>
       <div class="col-md-12">
-        <!-- <%=z.data%> -->
-        <!-- <img src="" alt=""> -->
+        <%=z.data%>
+        <img src="" alt="">
       </div>
-    <!-- <%})%> -->
+    <%})%>
   </div>
 </div><br>
 
@@ -111,15 +191,89 @@
       </div>
     </form>
   </div>
-  <!-- <h3 class="type-r1">TES CSS</h3> -->
+  <h3 class="type-r1">TES CSS</h3>
+
+
+
+======= -->
+
+    <div class="container">
+      <form class="" action="#" method="post">
+        <div class="row">
+          <button type="button" class="btn btn-primary btn-lg btn-block">Take a Picture</button>
+        </div>
+      </form>
+    </div><br>
+
+
+  <footer>
+    <div class="container btn-upload">
+      <form class="kirimGambar">
+        <input type="file" id="filePhoto" name="filePhoto" accept="image/*" >
+        <input type="submit" class="btn btn-info" value="submit">
+      </form>
+    </div>
+  </footer>
+
+  <!-- <script src="/js/data.js"></script> -->
   <script>
-  function uploadData() {
-      var x = document.createElement("INPUT");
-      x.setAttribute("type", "file");
-      document.body.appendChild(x);
-  }
+    $('form#kirimGambar').on('submit', (event) => {
+      event.preventDefault()
+      var data = new FormData();
+      data.append('filePhoto', $('#filePhoto')[0].files[0])
+
+      axios({
+        method: 'POST',
+        url: 'http://localhost:3000/vision',
+        data: $('#filePhoto')[0].files[0],
+        processData: false
+      })
+      .then((data)=>{
+        console.log(data)
+        //nanti return axios food disini
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    })
+
+    var search = $('input[name="search"]')
+    seacrh.keyup(function() {
+      let keyword = $(this).val()
+      $.ajax({
+        url: `https://community-food2fork.p.mashape.com/search?key=3f0eb392931eb697ef53ea1cf86478f8&q=${keyword}`,
+        type: 'GET',
+        dataType: 'json',
+        success: function(response){
+          console.log(response)
+        },
+        fail: function(err) {
+          console.log(err)
+        }
+      })
+    })
+    // var $kirimGambar = $('#kirimGambar')
+    // $('form.kirimGambar').submit(function(eventHandler){
+    //   eventHandler.preventDefault();
+    //   axios.post('http://localhost:3000/vision', {
+    //     gambar : $kirimGambar.val()
+    //   })
+    //   .then(response => {
+    //     console.log(response);
+    //   })
+    //   .catch(err => {
+    //     console.log(err);
+    //   })
+    // })
+    function uploadData() {
+        var x = document.createElement("INPUT");
+        x.setAttribute("type", "file");
+        document.body.appendChild(x);
+    }
   </script>
+  <!-- <script>
 
-
+  </script> -->
+<!-- >>>>>>> 26d901a1e8533f34195cd15ae5a6aef3e06c5dc6 -->
 </body>
 </html>

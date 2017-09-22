@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<style media="screen">
+
+    body {
+    margin-top: 30px;
+    background-color: #f7f5ea;
+    /*#f7f5ea;*/
+    }
+
+  .form-signin {
+    max-width: 380px;
+    padding: 15px 35px 45px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    .form-control {
+      position: relative;
+      font-size: 16px;
+      height: auto;
+      padding: 10px;
+      @include box-sizing(border-box);
+      &:focus {
+        z-index: 2;
+      }
+    }
+    input[type="text"] {
+      margin-bottom: -1px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    input[type="password"] {
+      margin-bottom: 20px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+    .gbr{
+      margin-left: 100px
+      background-color: #f7f5ea;
+    }
+  }
+</style>
+
+<body>
+  <div class="col-md-4 col-md-offset-4">
+    <div class="wrapper">
+      <img class="gbr img-responsive center-block" src="/image/logo.png" alt="logo">
+
+      <div class="caption">
+        <h4 class="text-center">Nama Resep</h4>
+        <p class="text-center">Shared by: siapa</p>
+
+        <!-- <input rows="3" type="text" name="" value=" -->
+        <div id="detail-recipe" class="collapse">
+          <textarea name="name" rows="8" cols="80" disabled>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </textarea>
+          <!-- " disabled > -->
+
+        </div>
+        <!-- <form class="" action="index.html" method="post"> -->
+        <p class="text-center"><a href="#" class="btn btn-default" role="button" data-toggle="collapse" data-target="#detail-recipe">Show Detail</a></p>
+        <!-- </form> -->
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

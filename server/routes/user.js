@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const express    = require('express');
 const router     = express.Router();
 const jwt        = require('../helper/jsonWebToken');
@@ -21,3 +22,16 @@ router.get('/',(req,res)=>{
 
 
 module.exports = router
+=======
+const express = require('express')
+const router = express.Router()
+
+const auth = require('../helpers/auth')
+const controllerUser = require('../controllers/user')
+
+router.get('/users', auth.isLogin, controllerUser.getAllUser)
+router.post('/signup', controllerUser.signUp)
+router.post('/signin', controllerUser.signIn)
+
+module.exports = router
+>>>>>>> 26d901a1e8533f34195cd15ae5a6aef3e06c5dc6

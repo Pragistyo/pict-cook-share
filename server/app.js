@@ -1,12 +1,29 @@
 const express    = require('express'),
       morgan     = require('morgan'),
       bodyParser = require('body-parser'),
+<<<<<<< HEAD
       cors       = require('cors'),
       mongoose   = require('mongoose');
 const port       = process.env.PORT || 3000
 const app        = express()
 const user       = require('./routes/user')
 
+=======
+      cors = require('cors'),
+      mongoose = require('mongoose');
+const port = process.env.PORT || 3000
+// const user = require('./routes/user')
+const vision = require('./routes/vision')
+const app = express()
+
+var url = 'mongodb://localhost/recipe';
+mongoose.connect(url);
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', function() {
+   console.log(`You're connected in this database`)
+});
+>>>>>>> 26d901a1e8533f34195cd15ae5a6aef3e06c5dc6
 
 app.use(cors())
 app.use(bodyParser.json())
@@ -29,7 +46,8 @@ mongoose.connect('mongodb://localhost/Shyf', (err) => {
 // });
 
 
-app.use('/user', user)
+// app.use('/', user)
+app.use('/vision', vision)
 
 app.listen(port);
 console.log('Your app is running on http://localhost:' + port);
