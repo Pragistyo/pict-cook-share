@@ -1,11 +1,26 @@
 *{
 
 }
-header{
+
+/*content*/
+.carousel-wrap{
+  padding: 0 8% 0 8%;
+}
+.carousel-inner .item .iimg{
+  object-fit: cover;
+   width: 100%;
+   height: 450px;
+}
+.heading{
+  text-align: center;
+  padding: 0 8% 0 8%;
+}
+.heading img{
+  padding: 15px 5px;
 }
 section{
   margin-top: 30px;
-  margin-bottom: 70px;
+  /* margin-bottom: 70px; */
 }
 .search-wrap{
   position: relative;
