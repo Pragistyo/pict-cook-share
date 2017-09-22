@@ -9,7 +9,7 @@ const user = require('./routes/user'),
       fbApi = require('./routes/fb-api')
 const app = express()
 
-var url = 'mongodb://localhost/Shyf-App';
+var url = 'mongodb://localhost/food';
 mongoose.connect(url);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
